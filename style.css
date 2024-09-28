@@ -1,0 +1,352 @@
+/* Basic resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Announcements Section Styles */
+#announcements {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#announcements h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.announcement-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px auto;
+  width: 80%; /* Adjust width as needed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-card h3 {
+  margin: 0 0 10px;
+  
+}
+.information {
+  color: black;
+}
+
+.date {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #1b1b1b;
+  color: #f0f0f0;
+}
+
+/* Navbar */
+#navbar {
+  background-color: orange;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+}
+
+#navbar ul {
+  list-style-type: none;
+}
+
+#navbar ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+#navbar ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#navbar ul li a:hover {
+  color: #ed5b1c;
+}
+
+/* Home Section */
+#home {
+  background: url('dark-school-bg.jpg') no-repeat center center/cover;
+  color: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#notes-section {
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+  background-color: rgba(240, 240, 240, 0.9);
+}
+
+.notes-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.note-item {
+  width: 30%;
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}
+#notes-section{
+  background-color:#444;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.note-item{
+  background-color: #ddd;
+}
+.school-logo {
+  width: 150px;
+  height: auto;
+}
+
+.intro-text {
+  background-color: orange; /* Black background with 50% opacity */
+  padding: 20px; /* Padding around the text */
+  border-radius: 10px; /* Optional: rounded corners */
+  opacity: 0.5;
+}
+.intro-text-p {
+  color: white;
+}
+
+.announcements {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #444;
+}
+#announcements{
+  background-color: #444;
+}
+.announcement-card{
+  background-color: #ddd;
+}
+
+/* About Us Section */
+#about {
+  padding: 40px;
+  background-color: #333;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+.team-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.team-card {
+  margin: 20px;
+  padding: 20px;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 10px;
+}
+
+.team-photo {
+  width: 100px;
+  height: auto;
+  border-radius: 20%;
+}
+
+.team-card h4 {
+  color: #f39c12;
+}
+
+/* Academics Section */
+#academics {
+  padding: 40px;
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #f0f0f0;
+}
+
+table, th, td {
+  border: 1px solid #444;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Gallery Section */
+#gallery {
+  padding: 40px;
+  background-color: #2c2c2c;
+  text-align: center;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.gallery-photo {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #444;
+}
+
+/* Contact Us Section */
+#contact {
+  padding: 40px;
+  background-color: #333;
+  text-align: center;
+  padding-bottom: 100px;
+
+}
+
+.contact-details {
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #444;
+  color: #f0f0f0;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #f39c12;
+  color: #1b1b1b;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #e67e22;
+}
+.dev {
+  color: #1b1b1b;
+}
+
+/* For section headers */
+h2, h3 {
+  color: #f39c12;
+}
+
+/* Links */
+a {
+  color: #f39c12;
+}
+
+a:hover {
+  color: #e67e22;
+}
+.news-ticker {
+  background-color: #222;
+  color: #f0f0f0;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.news-content {
+  display: flex;
+  white-space: nowrap;
+  position: absolute;
+  transition: margin-left 1s ease-in-out;
+}
+.news-item {
+  padding: 0 50px; /* Space between news items */
+}
+.news-ticker {
+  background-color: #222;
+  color: #f0f0f0;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-content {
+  display: flex;
+  white-space: nowrap;
+  position: absolute;
+  transition: margin-left 1s ease-in-out;
+}
+.news-item {
+  padding: 0 50px; /* Space between news items */
+}
+.intro-text p{
+  color: black;
+  font-weight: 600;
+  
+
+
+}
+#statistics {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  background-color: orange;
+  opacity: 0.8;
+}
+
+.stat {
+  text-align: center;
+}
+
+.emoji {
+  font-size: 40px;
+}
+
+p {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.count {
+  color: #1b1b1b;
+}

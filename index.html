@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to DAV PUBLIC School</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+      /* Styles for the video background */
+      .video-background {
+          position: fixed; /* Make it fixed to the viewport */
+          top: 0;
+          left: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          z-index: -1; /* Behind other content */
+          overflow: hidden; /* Hide overflow */
+      }
+      video {
+          min-width: 100%; /* Maintain aspect ratio */
+          min-height: 100%; /* Maintain aspect ratio */
+          object-fit: cover; /* Cover the entire area */
+      }
+      /* Optional: styles for content */
+      .content {
+          position: relative;
+          z-index: 1; /* Above the video */
+          color: white; /* Text color */
+          text-align: center; /* Center align text */
+          padding: 20px; /* Add some padding */
+      }
+      .school-logo {
+          display: block;
+          margin: 0 auto;
+          width: 150px; /* Adjust as needed */
+      }
+      .intro-text {
+          text-align: center;
+          margin: 20px 0;
+      }
+      .team-photo {
+          width: 150px; /* Square shape */
+          height: 150px; /* Square shape */
+          object-fit: cover; /* Maintains aspect ratio */
+      }
+      .team-cards {
+          display: flex;
+          justify-content: space-around;
+          margin: 20px 0;
+      }
+      .team-card {
+          text-align: center;
+          margin: 10px;
+      }
+      .gallery-images {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          margin: 20px 0;
+      }
+      .gallery-photo {
+          width: 200px; /* Adjust as needed */
+          height: 150px; /* Adjust as needed */
+          object-fit: cover; /* Maintains aspect ratio */
+          margin: 10px;
+      }
+      .contact-container {
+          max-width: 600px;
+          margin: 0 auto;
+      }
+      form {
+          display: flex;
+          flex-direction: column;
+      }
+      input, textarea {
+          margin: 10px 0;
+          padding: 10px;
+      }
+      input[type="submit"] {
+          cursor: pointer;
+      }
+      /* Styles for news ticker */
+      #news-ticker {
+          position: fixed;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: rgba(0, 0, 0, 0.7);
+          color: white;
+          padding: 10px;
+          border-radius: 5px;
+          white-space: nowrap;
+          overflow: hidden;
+          z-index: 10;
+      }
+      .news-item {
+          display: inline-block;
+          padding: 5px 10px;
+          transition: background-color 0.3s;
+      }
+      .news-item:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+      }
+      /* Styles for the map */
+      .map-container {
+          margin: 20px auto; /* Center the map container */
+          text-align: center; /* Center the map */
+          width: 300px; /* Set the width of the map container */
+          border: 2px solid #ccc; /* Border around the map */
+          border-radius: 10px; /* Rounded corners */
+          overflow: hidden; /* Hide overflow */
+      }
+      iframe {
+          width: 100%; /* Full width */
+          height: 200px; /* Adjust height for smaller size */
+          border: 0; /* No border */
+      }
+    </style>
+    <link rel="icon" href="favico.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Background Video -->
+  <div class="video-background">
+    <video autoplay muted loop>
+        <source src="davairoli.mp4" type="video/mp4"> <!-- Your video file -->
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-container">
+            <img src="your-logo.png" alt="School Logo" class="school-logo">
+            <div class="intro-text">
+                <h1>Welcome to DAV PUBLIC School</h1>
+                <p class="intro-text-p">We are a well-established institution committed to academic excellence, creativity, and fostering a supportive learning environment for students.</p>
+            </div>
+        </div>
+    </section>
+    <section id="statistics">
+      <div class="stat">
+        <span class="emoji">👨‍🎓</span>
+        <p class="count"><span id="students-counter">0</span>+ Students</p>
+      </div>
+      <div class="stat">
+        <span class="emoji">🏆</span>
+        <p class="count"><span id="trophies-counter">0</span>+ Trophies</p>
+      </div>
+      <div class="stat">
+        <span class="emoji">👩‍🏫</span>
+        <p class="count"><span id="teachers-counter">0</span>+ Teachers</p>
+      </div>
+    </section>
+    
+   
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="about-container">
+            <h2>About Us</h2>
+            <p>DAV PUBLIC School is dedicated to providing quality education, fostering a holistic development of students. Our mission is to nurture minds that are academically sharp, morally upright, and socially responsible. We believe in creating a learning environment that encourages curiosity, innovation, and a love for learning.</p>
+
+            <!-- Leadership Team Section -->
+            <div class="leadership-team">
+                <h3>Meet Our Leadership Team</h3>
+                <div class="team-cards">
+                    <!-- Card 1 -->
+                    <div class="team-card">
+                        <img src="principal.jpeg" alt="Principal" class="team-photo">
+                        <h4>Ms. Suruchi Kataria</h4>
+                        <p>Principal</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="team-card">
+                        <img src="images (1).jpeg" alt="Vice Principal" class="team-photo">
+                        <h4>Ms. Jane Smith</h4>
+                        <p>Vice Principal</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="team-card">
+                        <img src="principal_sskar.jpeg" alt="Administrator" class="team-photo">
+                        <h4>Mr. Arvind Sinha</h4>
+                        <p>Administrator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="notes-section">
+      <h2>Download Study Notes</h2>
+      <div class="notes-list">
+          <div class="note-item">
+              <h3>Mathematics </h3>
+              <p class="dev">Get the latest notes on Algebra and Calculus.</p>
+              <a href="UNIT1 G BALAJI.pdf"class="download-btn" target="_blank">Download PDF</a>
+          </div>
+          <div class="note-item">
+              <h3>Operating Systems</h3>
+              <p class="dev">Download comprehensive notes on OS</p>
+              <a href="Unit-1 Notes.pdf" class="download-btn" target="_blank">Download PDF</a>
+          </div>
+          <div class="note-item">
+              <h3>Computer Organization and Architecture</h3>
+              <p class="dev">Notes covering COA</p>
+              <a href="Unit2_COA_PPT_updated_2.8.24.pptx.pdf" class="download-btn" target="_blank">Download PDF</a>
+          </div>
+      </div>
+  </section>
+  
+    <!-- Academics Section -->
+    <section id="academics">
+        <div class="academics-container">
+            <h2>Academics</h2>
+
+            <!-- Class Timetable -->
+            <h3>Class 10 Timetable</h3>
+            <table border="1">
+                <tr>
+                    <th>Period</th>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>8:00 - 9:00 AM</td>
+                    <td>Mathematics</td>
+                    <td>English</td>
+                    <td>Science</td>
+                    <td>Social Studies</td>
+                    <td>Mathematics</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>9:00 - 10:00 AM</td>
+                    <td>Science</td>
+                    <td>Mathematics</td>
+                    <td>English</td>
+                    <td>Science</td>
+                    <td>English</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>10:00 - 11:00 AM</td>
+                    <td>Social Studies</td>
+                    <td>Science</td>
+                    <td>Mathematics</td>
+                    <td>English</td>
+                    <td>Social Studies</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>11:00 - 11:40 AM</td>
+                  <td>Games</td>
+                  <td>Science</td>
+                  <td>Yoga</td>
+                  <td>Library</td>
+                  <td> Games</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>11:45 - 12:30 AM</td>
+                <td>GS</td>
+                <td>Hindi</td>
+                <td>Marathi</td>
+                <td>English</td>
+                <td>Hindi</td>
+            </tr>
+                <!-- Add more rows as needed -->
+            </table>
+
+            
+        </div>
+    </section>
+  <!-- Announcements Section -->
+<section id="announcements">
+  <h2>Announcements</h2>
+  <div class="announcement-card">
+      <h3>New Admission Notice</h3>
+      <p class="date">Date: September 28, 2024</p>
+      <p class="information">We are pleased to announce that admissions for the 2025 academic year are now open. Visit our admissions page for more information.</p>
+  </div>
+  <div class="announcement-card">
+      <h3>School Annual Day</h3>
+      <p class="date">Date: October 15, 2024</p>
+      <p class="information">Join us for the annual day celebration featuring performances by students and special guests. Everyone is welcome!</p>=
+  </div>
+  <div class="announcement-card">
+      <h3>Parent-Teacher Meeting</h3>
+      <p class="date">Date: November 5, 2024</p>
+      <p class="information">We invite all parents to the upcoming Parent-Teacher Meeting to discuss student progress and school initiatives.</p>
+  </div>
+</section>
+
+    <!-- Gallery Section -->
+    <!-- Gallery Section -->
+<!-- Gallery Section -->
+<!-- Gallery Section -->
+<section id="gallery">
+  <div class="gallery-container">
+      <h2>Gallery</h2>
+      <div class="slideshow-container">
+          <!-- Each image will be wrapped in a div for the slideshow with captions -->
+          <div class="mySlides fade">
+              <img src="event.jpeg" alt="School Event 1" class="gallery-photo">
+              <div class="text">DAV Nationals Sporting event</div>
+          </div>
+          <div class="mySlides fade">
+              <img src="event2.jpeg" alt="School Event 2" class="gallery-photo">
+              <div class="text">Sports Day 2024: Students showcasing their talent</div>
+          </div>
+          <div class="mySlides fade">
+              <img src="event3.jpeg" alt="School Event 3" class="gallery-photo">
+              <div class="text">Dance fair 2024 , Students show their performances</div>
+          </div>
+          <div class="mySlides fade">
+              <img src="event4.jpeg" alt="School Event 4" class="gallery-photo">
+              <div class="text">DAV United Festival - Guest Mr. Manoj Vajpayee</div>
+          </div>
+      </div>
+  </div>
+</section>
+<style>
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%; /* Full width */
+  margin: auto;
+}
+
+.mySlides {
+  display: none; /* Hide images by default */
+  position: relative;
+}
+
+.gallery-photo {
+  width: 500px; /* Full width */
+  height: auto; /* Auto height */
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+/* Caption styling */
+.text {
+  color: black;
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  font-weight: bold;
+  width: 500px;
+  text-align: center;
+  background-color: orange;
+  opacity: 0.5; /* Semi-transparent background */
+  margin-left: 342px;
+}
+</style>
+</body>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+
+
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+        <div class="map-container">
+          <h2>Find Us Here</h2>
+          <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.831294257983!2d72.9780163153117!3d19.19788778706533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3b5639cf6b7%3A0x9d64c3eabf20f34c!2sDAV%20Public%20School%2C%20Airoli!5e0!3m2!1sen!2sin!4v1695900081230!5m2!1sen!2sin"
+              allowfullscreen=""
+              loading="lazy"></iframe>
+      </div>
+ 
+
+    <!-- News Ticker -->
+    <div id="news-ticker">
+        <span class="news-item">School Reopens on September 1, 2024</span>
+        <span class="news-item">Annual Day Celebrations on October 15, 2024</span>
+        <span class="news-item">Examination Schedule Released</span>
+    </div>
+    <!-- Newsletter Popup -->
+<div id="newsletter-popup" class="popup">
+  <div class="popup-content">
+      <span class="close" id="close-popup">&times;</span>
+      <h2>Subscribe to Our Newsletter</h2>
+      <p>Stay updated with the latest news and events!</p>
+      <form action="#">
+          <input type="email" placeholder="Enter your email" required>
+          <input type="submit" value="Subscribe">
+      </form>
+  </div>
+</div>
+
+<script src = "script.js"> </script>
+</body>
+</html>
